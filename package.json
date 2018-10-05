@@ -2,7 +2,7 @@
     "name": "code-zpl",
     "displayName": "ZPL Development Toolbox",
     "description": "Visual Studio Code extension for writing ZPL code.",
-    "version": "0.0.1",
+    "version": "0.1.0",
     "categories": [
         "Programming Languages"
     ],
@@ -10,7 +10,7 @@
         "vscode": "^1.22.0"
     },
     "keywords": [
-        "zpl",
+        "ZPL",
         "Zebra",
         "Labelary"
     ],
@@ -33,6 +33,9 @@
         "languages": [
             {
                 "id": "zpl",
+                "aliases": [
+                    "ZPL"
+                ],
                 "filenamePatterns": [
                     "*.zpl"                ]
             }
