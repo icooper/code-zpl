@@ -1,6 +1,6 @@
 # ZPL Development Toolbox
 
-This is a Visual Studio Code extension for supporting ZPL (Zebra printer language) development. Currently, this includes partial syntax highlighting for ZPL code (`*.zpl` files) and uses the [Labelary ZPL engine](http://labelary.com/viewer.html) to preview labels. Further functionality is under development.
+This is a Visual Studio Code extension for supporting ZPL (Zebra printer language) development. Currently, this includes partial syntax highlighting for ZPL code (`*.zpl` files). Further functionality is under development.
 
 ## Installation
 

@@ -1,0 +1,273 @@
+{
+    "scopeName": "source.zpl",
+    "fileTypes": [ ],
+    "name": "zpl",
+    "patterns": [
+        { "include": "#comment" },
+        { "include": "#data" },
+        { "include": "#command" }
+    ],
+
+    "repository": {
+        "comment": {
+            "match": "(?i)(\\^)(fx)([^\\^~]*)",
+            "captures": {
+                "1": { "name": "keyword.operator.zpl" },
+                "2": { "name": "keyword.control.zpl" },
+                "3": { "name": "comment.inline.zpl" }
+            }
+        },
+
+        "data": {
+            "patterns": [
+                { "include": "#data-fdfv" },
+                { "include": "#data-fn"   }
+            ]
+        },
+        
+        "data-fdfv": {
+            "match": "(?i)(\\^)(fd|fv)([^\\^~]*)",
+            "captures": {
+                "1": { "name": "keyword.operator.zpl" },
+                "2": { "name": "keyword.control.zpl" },
+                "3": { "name": "string.quoted.other.zpl" }
+            }           
+        },
+        "data-fn": {
+            "match": "(?i)(\\^)(fn)([0-9]+)(\"[^\"]*\")",
+            "captures": {
+                "1": { "name": "keyword.operator.zpl" },
+                "2": { "name": "keyword.control.zpl" },
+                "3": { "name": "constant.numeric.zpl" },
+                "4": { "name": "string.quoted.other.zpl" }
+            }           
+        },
+
+        "command": {
+            "patterns": [
+                { "include": "#command-caret" },
+                { "include": "#command-tilde" }
+            ]
+        },
+
+        "command-caret": {
+            "patterns": [
+                { "include": "#command-caret-1" },
+                { "include": "#command-caret-2" },
+                { "include": "#command-caret-3" },
+                { "include": "#command-caret-4" },
+                { "include": "#command-caret-5" },
+                { "include": "#command-caret-6" },
+                { "include": "#command-caret-7" }
+            ]
+        },
+        "command-caret-1": {
+            "match": "(?i)(\\^)(a@?|[b-z][a-z0-9])([a-z0-9.: ]*)(?=[\\^~]|$)",
+            "captures": {
+                "1": { "name": "keyword.operator.zpl" },
+                "2": { "name": "keyword.control.zpl"  },
+                "3": { "name": "constant.numeric.zpl" }
+            }
+        },
+        "command-caret-2": {
+            "match": "(?i)(\\^)(a@?|[b-z][a-z0-9])([a-z0-9.: ]*)(,)([a-z0-9.: ]*)(?=[\\^~]|$)",
+            "captures": {
+                "1": { "name": "keyword.operator.zpl" },
+                "2": { "name": "keyword.control.zpl"  },
+                "3": { "name": "constant.numeric.zpl" },
+                "4": { "name": "keyword.operator.zpl" },
+                "5": { "name": "constant.numeric.zpl" }
+            }
+        },
+        "command-caret-3": {
+            "match": "(?i)(\\^)(a@?|[b-z][a-z0-9])([a-z0-9.: ]*)(,)([a-z0-9.: ]*)(,)([a-z0-9.: ]*)(?=[\\^~]|$)",
+            "captures": {
+                "1": { "name": "keyword.operator.zpl" },
+                "2": { "name": "keyword.control.zpl"  },
+                "3": { "name": "constant.numeric.zpl" },
+                "4": { "name": "keyword.operator.zpl" },
+                "5": { "name": "constant.numeric.zpl" },
+                "6": { "name": "keyword.operator.zpl" },
+                "7": { "name": "constant.numeric.zpl" }
+            }
+        },
+        "command-caret-4": {
+            "match": "(?i)(\\^)(a@?|[b-z][a-z0-9])([a-z0-9.: ]*)(,)([a-z0-9.: ]*)(,)([a-z0-9.: ]*)(,)([a-z0-9.: ]*)(?=[\\^~]|$)",
+            "captures": {
+                "1": { "name": "keyword.operator.zpl" },
+                "2": { "name": "keyword.control.zpl"  },
+                "3": { "name": "constant.numeric.zpl" },
+                "4": { "name": "keyword.operator.zpl" },
+                "5": { "name": "constant.numeric.zpl" },
+                "6": { "name": "keyword.operator.zpl" },
+                "7": { "name": "constant.numeric.zpl" },
+                "8": { "name": "keyword.operator.zpl" },
+                "9": { "name": "constant.numeric.zpl" }
+            }
+        },
+        "command-caret-5": {
+            "match": "(?i)(\\^)(a@?|[b-z][a-z0-9])([a-z0-9.: ]*)(,)([a-z0-9.: ]*)(,)([a-z0-9.: ]*)(,)([a-z0-9.: ]*)(,)([a-z0-9.: ]*)(?=[\\^~]|$)",
+            "captures": {
+                "1":  { "name": "keyword.operator.zpl" },
+                "2":  { "name": "keyword.control.zpl"  },
+                "3":  { "name": "constant.numeric.zpl" },
+                "4":  { "name": "keyword.operator.zpl" },
+                "5":  { "name": "constant.numeric.zpl" },
+                "6":  { "name": "keyword.operator.zpl" },
+                "7":  { "name": "constant.numeric.zpl" },
+                "8":  { "name": "keyword.operator.zpl" },
+                "9":  { "name": "constant.numeric.zpl" },
+                "10": { "name": "keyword.operator.zpl" },
+                "11": { "name": "constant.numeric.zpl" }
+            }
+        },
+        "command-caret-6": {
+            "match": "(?i)(\\^)(a@?|[b-z][a-z0-9])([a-z0-9.: ]*)(,)([a-z0-9.: ]*)(,)([a-z0-9.: ]*)(,)([a-z0-9.: ]*)(,)([a-z0-9.: ]*)(,)([a-z0-9.: ]*)(?=[\\^~]|$)",
+            "captures": {
+                "1":  { "name": "keyword.operator.zpl" },
+                "2":  { "name": "keyword.control.zpl"  },
+                "3":  { "name": "constant.numeric.zpl" },
+                "4":  { "name": "keyword.operator.zpl" },
+                "5":  { "name": "constant.numeric.zpl" },
+                "6":  { "name": "keyword.operator.zpl" },
+                "7":  { "name": "constant.numeric.zpl" },
+                "8":  { "name": "keyword.operator.zpl" },
+                "9":  { "name": "constant.numeric.zpl" },
+                "10": { "name": "keyword.operator.zpl" },
+                "11": { "name": "constant.numeric.zpl" },
+                "12": { "name": "keyword.operator.zpl" },
+                "13": { "name": "constant.numeric.zpl" }
+            }
+        },
+        "command-caret-7": {
+            "match": "(?i)(\\^)(a@?|[b-z][a-z0-9])([a-z0-9.: ]*)(,)([a-z0-9.: ]*)(,)([a-z0-9.: ]*)(,)([a-z0-9.: ]*)(,)([a-z0-9.: ]*)(,)([a-z0-9.: ]*)(,)([a-z0-9.: ]*)(?=[\\^~]|$)",
+            "captures": {
+                "1":  { "name": "keyword.operator.zpl" },
+                "2":  { "name": "keyword.control.zpl"  },
+                "3":  { "name": "constant.numeric.zpl" },
+                "4":  { "name": "keyword.operator.zpl" },
+                "5":  { "name": "constant.numeric.zpl" },
+                "6":  { "name": "keyword.operator.zpl" },
+                "7":  { "name": "constant.numeric.zpl" },
+                "8":  { "name": "keyword.operator.zpl" },
+                "9":  { "name": "constant.numeric.zpl" },
+                "10": { "name": "keyword.operator.zpl" },
+                "11": { "name": "constant.numeric.zpl" },
+                "12": { "name": "keyword.operator.zpl" },
+                "13": { "name": "constant.numeric.zpl" },
+                "14": { "name": "keyword.operator.zpl" },
+                "15": { "name": "constant.numeric.zpl" }
+            }
+        },
+        
+        "command-tilde": {
+            "patterns": [
+                { "include": "#command-tilde-1" },
+                { "include": "#command-tilde-2" },
+                { "include": "#command-tilde-3" },
+                { "include": "#command-tilde-4" },
+                { "include": "#command-tilde-5" },
+                { "include": "#command-tilde-6" },
+                { "include": "#command-tilde-7" }
+            ]
+        },
+        "command-tilde-1": {
+            "match": "(?i)(~)(a@?|[b-z][a-z0-9])([a-z0-9.: ]*)(?=[\\^~]|$)",
+            "captures": {
+                "1": { "name": "keyword.operator.zpl" },
+                "2": { "name": "keyword.other.zpl"    },
+                "3": { "name": "constant.numeric.zpl" }
+            }
+        },
+        "command-tilde-2": {
+            "match": "(?i)(~)(a@?|[b-z][a-z0-9])([a-z0-9.: ]*)(,)([a-z0-9.: ]*)(?=[\\^~]|$)",
+            "captures": {
+                "1": { "name": "keyword.operator.zpl" },
+                "2": { "name": "keyword.other.zpl"    },
+                "3": { "name": "constant.numeric.zpl" },
+                "4": { "name": "keyword.operator.zpl" },
+                "5": { "name": "constant.numeric.zpl" }
+            }
+        },
+        "command-tilde-3": {
+            "match": "(?i)(~)(a@?|[b-z][a-z0-9])([a-z0-9.: ]*)(,)([a-z0-9.: ]*)(,)([a-z0-9.: ]*)(?=[\\^~]|$)",
+            "captures": {
+                "1": { "name": "keyword.operator.zpl" },
+                "2": { "name": "keyword.other.zpl"    },
+                "3": { "name": "constant.numeric.zpl" },
+                "4": { "name": "keyword.operator.zpl" },
+                "5": { "name": "constant.numeric.zpl" },
+                "6": { "name": "keyword.operator.zpl" },
+                "7": { "name": "constant.numeric.zpl" }
+            }
+        },
+        "command-tilde-4": {
+            "match": "(?i)(~)(a@?|[b-z][a-z0-9])([a-z0-9.: ]*)(,)([a-z0-9.: ]*)(,)([a-z0-9.: ]*)(,)([a-z0-9.: ]*)(?=[\\^~]|$)",
+            "captures": {
+                "1": { "name": "keyword.operator.zpl" },
+                "2": { "name": "keyword.other.zpl"    },
+                "3": { "name": "constant.numeric.zpl" },
+                "4": { "name": "keyword.operator.zpl" },
+                "5": { "name": "constant.numeric.zpl" },
+                "6": { "name": "keyword.operator.zpl" },
+                "7": { "name": "constant.numeric.zpl" },
+                "8": { "name": "keyword.operator.zpl" },
+                "9": { "name": "constant.numeric.zpl" }
+            }
+        },
+        "command-tilde-5": {
+            "match": "(?i)(~)(a@?|[b-z][a-z0-9])([a-z0-9.: ]*)(,)([a-z0-9.: ]*)(,)([a-z0-9.: ]*)(,)([a-z0-9.: ]*)(,)([a-z0-9.: ]*)(?=[\\^~]|$)",
+            "captures": {
+                "1":  { "name": "keyword.operator.zpl" },
+                "2":  { "name": "keyword.other.zpl"    },
+                "3":  { "name": "constant.numeric.zpl" },
+                "4":  { "name": "keyword.operator.zpl" },
+                "5":  { "name": "constant.numeric.zpl" },
+                "6":  { "name": "keyword.operator.zpl" },
+                "7":  { "name": "constant.numeric.zpl" },
+                "8":  { "name": "keyword.operator.zpl" },
+                "9":  { "name": "constant.numeric.zpl" },
+                "10": { "name": "keyword.operator.zpl" },
+                "11": { "name": "constant.numeric.zpl" }
+            }
+        },
+        "command-tilde-6": {
+            "match": "(?i)(~)(a@?|[b-z][a-z0-9])([a-z0-9.: ]*)(,)([a-z0-9.: ]*)(,)([a-z0-9.: ]*)(,)([a-z0-9.: ]*)(,)([a-z0-9.: ]*)(,)([a-z0-9.: ]*)(?=[\\^~]|$)",
+            "captures": {
+                "1":  { "name": "keyword.operator.zpl" },
+                "2":  { "name": "keyword.other.zpl"    },
+                "3":  { "name": "constant.numeric.zpl" },
+                "4":  { "name": "keyword.operator.zpl" },
+                "5":  { "name": "constant.numeric.zpl" },
+                "6":  { "name": "keyword.operator.zpl" },
+                "7":  { "name": "constant.numeric.zpl" },
+                "8":  { "name": "keyword.operator.zpl" },
+                "9":  { "name": "constant.numeric.zpl" },
+                "10": { "name": "keyword.operator.zpl" },
+                "11": { "name": "constant.numeric.zpl" },
+                "12": { "name": "keyword.operator.zpl" },
+                "13": { "name": "constant.numeric.zpl" }
+            }
+        },
+        "command-tilde-7" :{
+            "match": "(?i)(~)(a@?|[b-z][a-z0-9])([a-z0-9.: ]*)(,)([a-z0-9.: ]*)(,)([a-z0-9.: ]*)(,)([a-z0-9.: ]*)(,)([a-z0-9.: ]*)(,)([a-z0-9.: ]*)(,)([a-z0-9.: ]*)(?=[\\^~]|$)",
+            "captures": {
+                "1":  { "name": "keyword.operator.zpl" },
+                "2":  { "name": "keyword.other.zpl"    },
+                "3":  { "name": "constant.numeric.zpl" },
+                "4":  { "name": "keyword.operator.zpl" },
+                "5":  { "name": "constant.numeric.zpl" },
+                "6":  { "name": "keyword.operator.zpl" },
+                "7":  { "name": "constant.numeric.zpl" },
+                "8":  { "name": "keyword.operator.zpl" },
+                "9":  { "name": "constant.numeric.zpl" },
+                "10": { "name": "keyword.operator.zpl" },
+                "11": { "name": "constant.numeric.zpl" },
+                "12": { "name": "keyword.operator.zpl" },
+                "13": { "name": "constant.numeric.zpl" },
+                "14": { "name": "keyword.operator.zpl" },
+                "15": { "name": "constant.numeric.zpl" }
+            }
+        }
+    }
+}

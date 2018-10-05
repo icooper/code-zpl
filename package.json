@@ -1,0 +1,48 @@
+{
+    "name": "code-zpl",
+    "displayName": "ZPL Development Toolbox",
+    "description": "Visual Studio Code extension for writing ZPL code.",
+    "version": "0.0.1",
+    "categories": [
+        "Programming Languages"
+    ],
+    "engines": {
+        "vscode": "^1.22.0"
+    },
+    "keywords": [
+        "zpl",
+        "Zebra",
+        "Labelary"
+    ],
+    "qna": "https://github.com/icooper/code-zpl/issues",
+    "publisher": "IanCooper",
+    "author": {
+        "name": "Ian Cooper",
+        "url": "https://github.com/icooper"
+    },
+    "bugs": {
+        "url": "https://github.com/icooper/code-zpl/issues"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/icooper/code-zpl"
+    },
+    "homepage": "https://github.com/icooper/code-zpl",
+    "license": "MIT",
+    "contributes": {
+        "languages": [
+            {
+                "id": "zpl",
+                "filenamePatterns": [
+                    "*.zpl"                ]
+            }
+        ],
+        "grammars": [
+            {
+                "language": "zpl",
+                "scopeName": "source.zpl",
+                "path": "./syntaxes/zpl.json"
+            }
+        ]
+    }
+}
